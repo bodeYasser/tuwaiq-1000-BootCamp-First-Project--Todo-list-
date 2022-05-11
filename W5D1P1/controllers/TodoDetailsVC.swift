@@ -33,23 +33,42 @@ class TodoDetailsVC: UIViewController {
     }
     
     @IBAction func deleteButtonClicked() {
-        NotificationCenter.default.post(name: NSNotification.Name("deletedTodo"), object: nil,userInfo: ["deletedTodoIndex" : selectedTodoIndex!])
         
-        let deleteAlert = UIAlertController(title: "انتبه", message: "انت علي وشك ان تحذف مهمه", preferredStyle: .alert)
-        let confirmDelete = UIAlertAction(title: "حذف المهمه", style: .destructive) { ـ in
-            let doneDelete = UIAlertController(title: "تم الانتهاء", message: "نجحه عمليه الحذف", preferredStyle: .alert)
-            let exitDelete = UIAlertAction(title: "اغلاق", style: .default) { _ in
+        let deleteAlert = MyAlertViewController(title: "انتبه", message: "انت علي وشك ان تحذف مهمه")
+        deleteAlert.addAction(title: "حذف المهمه", style: .default) { _ in
+            let doneDelete = MyAlertViewController(title : "تم الانتهاء" , message: "نجحه عمليه الحذف")
+            doneDelete.addAction(title: "تم", style: .default){_ in
                 self.navigationController?.popViewController(animated: true)
+                
+                NotificationCenter.default.post(name: NSNotification.Name("deletedTodo"), object: nil,userInfo: ["deletedTodoIndex" : self.selectedTodoIndex!])
             }
-            doneDelete.addAction(exitDelete)
-            self.present(doneDelete, animated: true, completion: nil)
+            self.present(doneDelete, animated: true)
 
-            
+        
         }
-        let cancelDelete = UIAlertAction(title: "الغاء الحذف", style: .default, handler: nil)
-        deleteAlert.addAction(confirmDelete)
-        deleteAlert.addAction(cancelDelete)
-        present(deleteAlert, animated: true, completion: nil)
+            //deleteAlert.addAction(title: "اغلاق", style: .default)
+            deleteAlert.addAction(title: "الغاء الحذف" ,style: .cancel)
+            present(deleteAlert,animated: true)
+        
+//        NotificationCenter.default.post(name: NSNotification.Name("deletedTodo"), object: nil,userInfo: ["deletedTodoIndex" : selectedTodoIndex!])
+//
+//        let deleteAlert = UIAlertController(title: "انتبه", message: "انت علي وشك ان تحذف مهمه", preferredStyle: .alert)
+//
+//        let confirmDelete = UIAlertAction(title: "حذف المهمه", style: .destructive) { ـ in
+//            let doneDelete = UIAlertController(title: "تم الانتهاء", message: "نجحه عمليه الحذف", preferredStyle: .alert)
+//
+//            let exitDelete = UIAlertAction(title: "اغلاق", style: .default) { _ in
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//            doneDelete.addAction(exitDelete)
+//            self.present(doneDelete, animated: true, completion: nil)
+//
+//
+//        }
+//        let cancelDelete = UIAlertAction(title: "الغاء الحذف", style: .default, handler: nil)
+//        deleteAlert.addAction(confirmDelete)
+//        deleteAlert.addAction(cancelDelete)
+//        present(deleteAlert, animated: true, completion: nil)
         
             
     }

@@ -19,6 +19,8 @@
 		89B962862822E14E0010494C /* TodoDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B962852822E14E0010494C /* TodoDetailsVC.swift */; };
 		89B962882823ACC20010494C /* NewTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B962872823ACC20010494C /* NewTodoVC.swift */; };
 		89EEBA54282943D9000E6CA4 /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEBA53282943D9000E6CA4 /* StorageVC.swift */; };
+		89EEBA56282C112E000E6CA4 /* MyAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEBA55282C112E000E6CA4 /* MyAlertViewController.swift */; };
+		AC72C145BDB95FEF81595D5E /* Pods_W5D1P1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6CE72B435DB814B95F56E4 /* Pods_W5D1P1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		89B962852822E14E0010494C /* TodoDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsVC.swift; sourceTree = "<group>"; };
 		89B962872823ACC20010494C /* NewTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoVC.swift; sourceTree = "<group>"; };
 		89EEBA53282943D9000E6CA4 /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
+		89EEBA55282C112E000E6CA4 /* MyAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlertViewController.swift; sourceTree = "<group>"; };
+		A7F83E8D960DA32A1D8ED727 /* Pods-W5D1P1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W5D1P1.debug.xcconfig"; path = "Target Support Files/Pods-W5D1P1/Pods-W5D1P1.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6CE72B435DB814B95F56E4 /* Pods_W5D1P1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W5D1P1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9576C716E51CEBB777AD7CE /* Pods-W5D1P1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W5D1P1.release.xcconfig"; path = "Target Support Files/Pods-W5D1P1/Pods-W5D1P1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC72C145BDB95FEF81595D5E /* Pods_W5D1P1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				89B96266282295340010494C /* W5D1P1 */,
 				89B96265282295340010494C /* Products */,
+				F97EC763E8F86CAEA7401A79 /* Pods */,
+				C1E3D8022853F2D0A9C3B350 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +104,7 @@
 			children = (
 				89B9627F2822BEB70010494C /* TodoCellVC.swift */,
 				89B9626D282295340010494C /* Main.storyboard */,
+				89EEBA55282C112E000E6CA4 /* MyAlertViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -117,6 +127,23 @@
 			path = storage;
 			sourceTree = "<group>";
 		};
+		C1E3D8022853F2D0A9C3B350 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6CE72B435DB814B95F56E4 /* Pods_W5D1P1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F97EC763E8F86CAEA7401A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7F83E8D960DA32A1D8ED727 /* Pods-W5D1P1.debug.xcconfig */,
+				C9576C716E51CEBB777AD7CE /* Pods-W5D1P1.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89B96278282295360010494C /* Build configuration list for PBXNativeTarget "W5D1P1" */;
 			buildPhases = (
+				0523B8EBAD9658BD6692F879 /* [CP] Check Pods Manifest.lock */,
 				89B96260282295340010494C /* Sources */,
 				89B96261282295340010494C /* Frameworks */,
 				89B96262282295340010494C /* Resources */,
+				30C8D17C32BD2132DD824E63 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,12 +212,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0523B8EBAD9658BD6692F879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-W5D1P1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C8D17C32BD2132DD824E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W5D1P1/Pods-W5D1P1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-W5D1P1/Pods-W5D1P1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-W5D1P1/Pods-W5D1P1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89B96260282295340010494C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				89B96268282295340010494C /* AppDelegate.swift in Sources */,
+				89EEBA56282C112E000E6CA4 /* MyAlertViewController.swift in Sources */,
 				899244262825757000A3A006 /* TodosModel.xcdatamodeld in Sources */,
 				89B962882823ACC20010494C /* NewTodoVC.swift in Sources */,
 				89B962862822E14E0010494C /* TodoDetailsVC.swift in Sources */,
@@ -340,6 +412,7 @@
 		};
 		89B96279282295360010494C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7F83E8D960DA32A1D8ED727 /* Pods-W5D1P1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +442,7 @@
 		};
 		89B9627A282295360010494C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9576C716E51CEBB777AD7CE /* Pods-W5D1P1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
